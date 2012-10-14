@@ -1,41 +1,30 @@
-/**********************************************/
-/*
-/* Darker Skin by Darcy Clarke - 2011
-/*
-/* For how to install, or more themes, check out:
-/* http://darcyclarke.me/design/skin-your-chrome-inspector/
-/* 
-/* Color scheme is based on Joe Bergantine's Specials Board:
-/* http://joebergantine.com/werkstatt/seestyle
-/*
-/* Dark Skin for Console by Kornelije Sajler
-/*
-/* For usage and code clone the git repo:
-/* git clone git@bitbucket.org:xajler/chrome-devtools-dark-theme.git
-/*
-/* TODO:
-/* Change Links in Console since they are grey!
-/*
-/**********************************************/
+/* Github colorscheme for Chrome Developer Tools */
+
+/* https://github.com/jellea/chrome-devtools-github-theme */
+
+/* Based on https://bitbucket.org/xajler/chrome-devtools-dark-theme */
 
 /**********************************************/
 /* Layout
 /**********************************************/
 #elements-content.source-code {
-  background: #242537 !important;
-  font-size: 12px !important;
+  background: #F8F8FF !important;
+  font-size: 13px !important;
+  font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  
 }
 
 #elements-content .highlight { 
-  color: #d4d4d4;
+  /*color: #445588;*/
 }
 
 #elements-content .selection {
-
+  background: #F8F8FF;
 }
 
-#elements-content .selection.selected {
-
+body div .selected {
+  color: #F8F8FF !important;
+  background: #445588;
 }
 
 #elements-content .parent {
@@ -50,7 +39,7 @@
 }
 
 #elements-content .parent.selected {
-  
+
 }
 
 #elements-content .parent.selected {
@@ -59,54 +48,54 @@
 }
 
 #elements-content .parent.expanded {
-  
+
 }
 
 #elements-content .parent::before {
-  content: url(chrome-devtools://devtools/Images/treeRightTriangleWhite.png) !important;
+  content: url(chrome-devtools://devtools/Images/treeRightTriangleBlack.png) !important;
   position: relative;
   z-index: 999;
 }
 
 #elements-content .parent.expanded::before {
-  content: url(chrome-devtools://devtools/Images/treeDownTriangleWhite.png) !important;
+  content: url(chrome-devtools://devtools/Images/treeDownTriangleBlack.png) !important;
 }
 
 #elements-sidebar .styles-section .properties li.parent::before,
 #elements-sidebar .section > .header::before,
 #elements-sidebar .properties-tree li.parent::before,
 #elements-sidebar .event-bars .event-bar .header::before {
-  content: url(chrome-devtools://devtools/Images/treeRightTriangleWhite.png) !important;
+  content: url(chrome-devtools://devtools/Images/treeRightTriangleBlack.png) !important;
 }
 
 #elements-sidebar .styles-section .properties li.parent.expanded::before,
 #elements-sidebar .section.expanded > .header::before,
 #elements-sidebar .properties-tree li.parent.expanded::before,
 #elements-sidebar .event-bars .event-bar.expanded .header::before {
-  content: url(chrome-devtools://devtools/Images/treeDownTriangleWhite.png) !important;
+  content: url(chrome-devtools://devtools/Images/treeDownTriangleBlack.png) !important;
 }
 
 /**********************************************/
 /* HTML
 /**********************************************/
 #elements-content .webkit-html-comment {
-  color: #8c8c8c !important;
+  color: #999988 !important;
 }
 
 #elements-content .webkit-html-doctype {
-
+  color: #999 !important;
 }
 
 #elements-content .webkit-html-tag {
-  color: #ffc97c !important;
+  color: navy !important;
 }
 
 #elements-content .webkit-html-attribute-name {
-  color: #d97640 !important;
+  color: teal !important;
 }
 
 #elements-content .webkit-html-attribute-value {
-  color: #abca7e !important;
+  color: #D14 !important;
 }
 
 #elements-content .webkit-html-text-node {
@@ -118,15 +107,16 @@
 }
 
 #elements-content .webkit-html-js-node {
-  color: #c2c3c3 !important;
+  color: #0086B3 !important;
 }
 
 #elements-content .webkit-javascript-keyword {
-  color: #d97640 !important;
+  color: black !important;
+  font-weight: bold;
 }
 
 #elements-content .webkit-javascript-ident {
-  color: #d97640 !important;
+  color: black !important;
 }
 
 #elements-content .webkit-javascript-string {
@@ -147,33 +137,39 @@
 
 #console-view {
     position: absolute;
-    background: #242537 !important;
+    background: #F8F8FF !important;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-	  color: #a7d473 !important;
+    /*color: #eaeaea !important;*/
     overflow-y: auto;
+    font-size: 13px !important;
+    font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+}
+.source-code,.monospace{
+    font-size: 13px !important;
+    font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
 .console-formatted-object, .console-formatted-node {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    color: #eec981 !important;
+    color: #555555 !important;
 }
 
 .console-formatted-number {
-    color: #3f9bd1 !important;
+    color: #009999 !important;
 }
 
 .console-formatted-string, .console-formatted-regexp {
-    color: #d97640 !important;
+    color: #d14 !important;
     white-space: pre;
 }
 
 .console-formatted-null, .console-formatted-undefined {
-    color: #9acbfb !important;
+    color: #009926 !important;
 }
 
 .console-group-messages .section .header::before {
@@ -182,15 +178,15 @@
     left: 1px;
     width: 8px;
     height: 8px;
-    content: url(chrome-devtools://devtools/Images/treeRightTriangleWhite.png) !important;
+    content: url(chrome-devtools://devtools/Images/treeRightTriangleBlack.png) !important;
 }
 
 .console-group-messages .section.expanded .header::before {
-    content: url(chrome-devtools://devtools/Images/treeDownTriangleWhite.png) !important;
+    content: url(chrome-devtools://devtools/Images/treeRightTriangleBlack.png) !important;
 }
 
 .properties-tree li.parent::before {
-    content: url(chrome-devtools://devtools/Images/treeRightTriangleWhite.png) !important;
+    content: url(chrome-devtools://devtools/Images/treeRightTriangleBlack.png) !important;
     opacity: 0.75;
     float: left;
     width: 8px;
@@ -201,12 +197,12 @@
 }
 
 .properties-tree li.parent.expanded::before {
-	content: url(chrome-devtools://devtools/Images/treeDownTriangleWhite.png) !important;
+    content: url(chrome-devtools://devtools/Images/treeRightTriangleBlack.png) !important;
     margin-top: 1px;
 }
 
 .section .properties .name, .event-properties .name {
-    color: #ac6f44 !important;
+    color: #008080 !important;
 }
 
 .section .properties .dimmed {
@@ -214,11 +210,11 @@
 }
 
 .section .properties .value.error {
-    color: #FF3D3D !important;
+    color: #a61717 !important;
 }
 
 .section .properties .number, .event-properties .number {
-    color: #3f9bd1 !important;
+    color: #009999 !important;
 }
 
 .section .properties .keyword, .event-properties .keyword {
@@ -226,13 +222,14 @@
 }
 
 .section .properties .color, .event-properties .color {
-	 color: #d8f2ba !important;
+	 color: #555555 !important;
 }
 
 .console-error-level .console-message-text, .console-error-level .section .header .title {
-    color: #FF3D3D !important;
+    color: #a61717 !important;
 }
 
 .section .properties .value.error {
-    color: #FF3D3D !important;
+    color: #a61717 !important;
 }
+
